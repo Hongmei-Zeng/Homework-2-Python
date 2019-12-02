@@ -8,5 +8,7 @@ The script has fulfilled five tasks in order by working out:
 5. The greatest decrease in Losses (date and amount) over the entire period
 
 Although only five results have been presented, working through the work, almost each step borrowed "print" function to confirm each action/calculation do right job as expected.
-So suggest, when reader reviews the code, the function of "print" can also be used right after an action to help understand and check up the necesary of every step.
-Some key Comments have been left in to 
+Although only five results have been presented, working through the work, almost each step borrowed "print()" to "visualize" calculation result and to confirm each action did its right job as expected.
+So suggest, when reader reviews the code, the "print" function can also be used right after an action to help understand and check up the necesary of every step.
+
+Some key Comments have been added to make the code easier understand. 
