@@ -45,17 +45,17 @@ with open(r"C:\Users\Mei\Desktop\UT Data Analysis Bootcamp\Homework-2-Python\Ori
     print(f'Average Change is: ${change_avg:,.2f}'.replace('$-', '-$'))
     
 # 4th analysis on the greatest increase in Profits over the entire period:
-    greatest_incrs_P = max(change_list)
-    idx_incrs_change = change_list.index(greatest_incrs_P) # determine the index of "greatest_incrs_P" in its list
-    idx_incrs_file_PL = idx_incrs_change + 1               # deduce backwards, greatest_incrs_P = file_PL[idx_in_change + 1] - file_PL[idx_in_change]
-    date_in_file = file_date[idx_incrs_file_PL]            # the index of a date has the same index of its matching Profits/Losses in file/file_date/file_PL
-    print(f'Greatest Increase in Profits is: ${greatest_incrs_P:,.0f}'.replace('$-', '-$'), 'Achieved in', date_in_file)
-
 # 5th analysis on the greatest decrease in Losses over the entire period:
-    greatest_decrs_L = min(change_list)
-    idx_decrs_change = change_list.index(greatest_decrs_L) # same logic as 4th task
-    idx_decrs_file_PL = idx_decrs_change + 1               
-    date_in_file = file_date[idx_decrs_file_PL]              
-    print(f'Greatest Decrease in Losses is: ${greatest_decrs_L:,.0f}'.replace('$-', '-$'), 'Happened in', date_in_file)
+def date_best_worst(greatest_incrs_decrs):
+    idx_IncrsDecrs_change = change_list.index(greatest_incrs_decrs) # determine the index of "greatest_incrs_decrs" in its list
+    idx_IncrsDecrs_file_PL = idx_IncrsDecrs_change + 1              # deduce backwards, greatest_incrs_decrs = file_PL[idx_in_change + 1] - file_PL[idx_in_change]
+    date_in_file = file_date[idx_IncrsDecrs_file_PL]                # the index of a date has the same index of its matching Profits/Losses in file, file_date, and file_PL
+    return date_in_file
+
+greatest_incrs_P = max(change_list)
+print(f'Greatest Increase in Profits is: ${greatest_incrs_P:,.0f}'.replace('$-', '-$'), 'Achieved in', date_best_worst(greatest_incrs_P))
+
+greatest_decrs_L = min(change_list)
+print(f'Greatest Decrease in Losses is: ${greatest_decrs_L:,.0f}'.replace('$-', '-$'), 'Happened in', date_best_worst(greatest_decrs_L))
 
 file.close()
