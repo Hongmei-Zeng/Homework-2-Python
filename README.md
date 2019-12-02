@@ -7,7 +7,6 @@ The script has fulfilled five tasks in order by working out:
 4. The greatest increase in Profits (date and amount) over the entire period
 5. The greatest decrease in Losses (date and amount) over the entire period
 
-Although only five results have been presented, working through the work, almost each step borrowed "print" function to confirm each action/calculation do right job as expected.
 Although only five results have been presented, working through the work, almost each step borrowed "print()" to "visualize" calculation result and to confirm each action did its right job as expected.
 So suggest, when reader reviews the code, the "print" function can also be used right after an action to help understand and check up the necesary of every step.
 
